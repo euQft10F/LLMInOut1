@@ -1,0 +1,55 @@
+---
+title: "LLM Outputs"
+format:
+  revealjs:
+    theme: white
+    slide-number: false
+    embbed-resources: true
+    width: 1200
+    height: 700
+    margin: 0.04
+    mathjax: true
+    font-size: 32px  
+    css: slides.css
+---
+
+## Distribution over vocabulary
+
+![](Out1.png){width="100%" fig-align="center"}
+
+
+## Temperature
+
+Controls the randomness in the sampling process.
+
+### Softmax function:
+
+$$s(x_i) = \frac{e^{x_i}}{\sum_{i=1}^{N} e^{x_j}}$$
+
+Approximately $argmax(x_i)$, but has smooth gradients
+
+## Temperature
+
+Controls the randomness in the sampling process.
+
+### Softmax function:
+
+::: {style="font-size: 1.1em;"}
+$$s(x_i) = \frac{e^{\frac{x_i}{\color{red}{\theta}}}}{\sum_{i=1}^{N} e^{\frac{x_j}{\color{red}{\theta}}}}$$
+
+$\color{red}{\theta}$ - Temperature parameter
+:::
+
+## High Temperature
+
+![](Out2.png){width="100%" fig-align="center"}
+
+## Low Temperature
+
+![](Out3.png){width="100%" fig-align="center"}
+
+## Top-k
+![](Out4.png){width="100%" fig-align="center"}
+
+## Top-p
+![](Out5.png){width="100%" fig-align="center"}
